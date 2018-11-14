@@ -1,0 +1,19 @@
+{
+  "description": "Samples for the @google-cloud/rcloadenv npm module.",
+  "license": "Apache-2.0",
+  "author": "Google LLC",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": "googleapis/nodejs-rcloadenv",
+  "private": true,
+  "scripts": {
+    "test": "mocha system-test"
+  },
+  "dependencies": {
+    "@google-cloud/rcloadenv": "*"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
