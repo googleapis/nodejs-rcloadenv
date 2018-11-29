@@ -13,13 +13,14 @@ Wraps execution of a given command and loads variables from the
 ## CLI
 
 ### Global Installation
-
-  npm install -g @google-cloud/rcloadenv
+```sh
+npm install -g @google-cloud/rcloadenv
+```
 
 ### Local Installation
-
-  npm install @google-cloud/rcloadenv
-
+```sh
+npm install @google-cloud/rcloadenv
+```
 
 Now wrap your app's `start` script with `rcloadenv` in `package.json`:
 
@@ -64,8 +65,9 @@ For more information, see https://github.com/googleapis/nodejs-rcloadenv
 ## API
 
 ### Installation
-
-  npm install @google-cloud/rcloadenv
+```sh
+npm install @google-cloud/rcloadenv
+```
 
 ### Usage
 
@@ -101,9 +103,7 @@ rcloadenv.getAndApply('my-config')
 Load the variables and mix them into a provided object:
 ```js
 const rcloadenv = require('@google-cloud/rcloadenv');
-
 const newEnv = Object.assign({}, process.env);
-
 rcloadenv.getAndApply('my-config', newEnv)
   .then((env) => {
     console.log(env.MY_VAR);
@@ -114,13 +114,7 @@ rcloadenv.getAndApply('my-config', newEnv)
 ```
 
 ## Contributing
-
-See the [CONTRIBUTING.md] file.
-
-[contributing]: https://github.com/googleapis/nodejs-rcloadenv/tree/master/CONTRIBUTING.md
+See the [CONTRIBUTING.md](https://github.com/googleapis/nodejs-rcloadenv/tree/master/CONTRIBUTING.md) file.
 
 ## License
-
-Apache-2.0, see the [LICENSE][license] file.
-
-[license]: https://github.com/googleapis/nodejs-rcloadenv/tree/master/LICENSE
+Apache-2.0, see the [LICENSE](https://github.com/googleapis/nodejs-rcloadenv/tree/master/LICENSE) file.
