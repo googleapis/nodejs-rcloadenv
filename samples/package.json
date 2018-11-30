@@ -5,15 +5,19 @@
   "engines": {
     "node": ">=8"
   },
+  "files": [
+    "*.js"
+  ],
   "repository": "googleapis/nodejs-rcloadenv",
   "private": true,
   "scripts": {
-    "test": "mocha system-test"
+    "test": "mocha system-test --timeout 60000"
   },
   "dependencies": {
-    "@google-cloud/rcloadenv": "*"
+    "@google-cloud/rcloadenv": "^0.2.1"
   },
   "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^3.0.0",
     "mocha": "^5.2.0"
   }
 }

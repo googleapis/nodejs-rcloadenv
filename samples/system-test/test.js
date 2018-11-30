@@ -13,4 +13,15 @@
  * limitations under the License.
  */
 
-console.warn(`no sample tests available 👎`);
+const assert = require('assert');
+const tools = require('@google-cloud/nodejs-repo-tools');
+
+tools.checkCredentials();
+
+describe('quickstart samples', () => {
+  it('should run the quickstart', async () => {
+    const output = await tools.runAsync('node quickstart.js');
+    assert.ok(output.length > 0);
+    assert.ok(output.includes('banana'));
+  });
+});
