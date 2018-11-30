@@ -67,12 +67,16 @@ async function debug(opts: RCLoadEnvOptions, ...args: Array<{}>) {
  * @param {object} [opts]
  * @returns {Promise}
  */
-export async function getVariables(configName: string, opts: RCLoadEnvOptions = {}) {
-  opts.scopes = opts.scopes || ['https://www.googleapis.com/auth/cloudruntimeconfig'];
-  debug(opts, `Loading config "${configName}" from project "${opts.projectId}".`);
+export async function getVariables(
+    configName: string, opts: RCLoadEnvOptions = {}) {
+  opts.scopes =
+      opts.scopes || ['https://www.googleapis.com/auth/cloudruntimeconfig'];
+  debug(
+      opts, `Loading config "${configName}" from project "${opts.projectId}".`);
   const auth = new GoogleAuth(opts);
   const projectId = await auth.getProjectId();
-  const requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${projectId}/configs/${configName}/variables`;
+  const requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${
+      projectId}/configs/${configName}/variables`;
   const result = await fetchPage(requestUrl, auth);
   return result;
 }

@@ -15,38 +15,30 @@
 
 import * as assert from 'assert';
 import * as nock from 'nock';
-import * as rcloadenv from '../src';
 import * as proxyquire from 'proxyquire';
+
+import * as rcloadenv from '../src';
 
 nock.disableNetConnect();
 const fakeConfig = 'fake-config';
 const fakeProjectId = 'fake-project';
 const fakeResponse = {
-  variables: [
-    {
-      name: 'fake',
-      updateTime: 'fake',
-      value: 'fake'
-    }
-  ]
+  variables: [{name: 'fake', updateTime: 'fake', value: 'fake'}]
 };
 
 describe('rcloadenv api', () => {
-
   const rc = proxyquire('../src', {
-    'google-auth-library': {
-      GoogleAuth: class {
-        constructor() {
-          return {
-            getProjectId: () => Promise.resolve(fakeProjectId),
-            request: () => Promise.resolve({
-              data: fakeResponse
-            })
-          };
-        }
-      }
-    }
-  }) as typeof rcloadenv;
+               'google-auth-library': {
+                 GoogleAuth: class {
+                   constructor() {
+                     return {
+                       getProjectId: () => Promise.resolve(fakeProjectId),
+                       request: () => Promise.resolve({data: fakeResponse})
+                     };
+                   }
+                 }
+               }
+             }) as typeof rcloadenv;
 
   it('should transform variables', () => {
     assert.ok(rc.transform);
@@ -64,5 +56,4 @@ describe('rcloadenv api', () => {
   it('should get and apply variables', async () => {
     assert.ok(rc.getAndApply);
   });
-
 });
