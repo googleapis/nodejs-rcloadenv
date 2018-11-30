@@ -14,7 +14,6 @@
  */
 
 import {GoogleAuth, GoogleAuthOptions} from 'google-auth-library';
-import * as got from 'got';
 import * as path from 'path';
 import snakeCase = require('lodash.snakecase');
 
@@ -38,28 +37,20 @@ export interface RCLoadEnvOptions extends GoogleAuthOptions {
   debug?: boolean;
 }
 
-async function fetchPage(
-    url: string, authToken: string,
-    nextPageToken?: string): Promise<Variable[]> {
-  const query = {
+async function fetchPage(url: string, auth: GoogleAuth, nextPageToken?: string):
+    Promise<Variable[]> {
+  const params = {
     pageSize: PAGE_SIZE,
     returnValues: true,
     pageToken: nextPageToken
   };
 
-  const response = await got.get(url, {
-    headers: {
-      Authorization: `Bearer ${authToken}`,
-    },
-    query,
-    json: true,
-  });
-  const variables = response.body.variables || [];
+  const response = await auth.request({url, params});
+  const variables = response.data.variables || [];
   if (variables.length < PAGE_SIZE) {
     return variables;
   }
-  const _variables =
-      await fetchPage(url, authToken, response.body.nextPageToken);
+  const _variables = await fetchPage(url, auth, response.data.nextPageToken);
   return variables.concat(_variables || []);
 }
 
@@ -83,11 +74,10 @@ export async function getVariables(
   debug(
       opts, `Loading config "${configName}" from project "${opts.projectId}".`);
   const auth = new GoogleAuth(opts);
-  const token = await auth.getAccessToken();
   const projectId = await auth.getProjectId();
   const requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${
       projectId}/configs/${configName}/variables`;
-  const result = await fetchPage(requestUrl, token!);
+  const result = await fetchPage(requestUrl, auth);
   return result;
 }
 
