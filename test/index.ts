@@ -13,10 +13,10 @@
  * limitations under the License.
  */
 
-const assert = require('assert');
-const rcloadenv = require('../src');
+import * as assert from 'assert';
+import * as rcloadenv from '../src';
 
-describe('library utility methods', () => {
+describe('rcloadenv', () => {
   it('should have better tests', () => {
     assert.ok(rcloadenv.getAndApply);
   });
