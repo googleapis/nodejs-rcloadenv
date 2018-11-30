@@ -37,22 +37,20 @@ export interface RCLoadEnvOptions extends GoogleAuthOptions {
   debug?: boolean;
 }
 
-async function fetchPage(
-    url: string, auth: GoogleAuth,
-    nextPageToken?: string): Promise<Variable[]> {
+async function fetchPage(url: string, auth: GoogleAuth, nextPageToken?: string):
+    Promise<Variable[]> {
   const params = {
     pageSize: PAGE_SIZE,
     returnValues: true,
     pageToken: nextPageToken
   };
 
-  const response = await auth.request({ url, params });
+  const response = await auth.request({url, params});
   const variables = response.data.variables || [];
   if (variables.length < PAGE_SIZE) {
     return variables;
   }
-  const _variables =
-      await fetchPage(url, auth, response.data.nextPageToken);
+  const _variables = await fetchPage(url, auth, response.data.nextPageToken);
   return variables.concat(_variables || []);
 }
 
