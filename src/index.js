@@ -77,25 +77,20 @@ exports.getVariables = (configName, opts = {}) => {
     `Loading config "${configName}" from project "${opts.projectId}".`
   );
 
-  let requestUrl;
-
-  return new Promise((resolve, reject) => {
-    const auth = new GoogleAuth(opts);
-    auth.getToken((err, authToken) => {
-      if (err) {
-        reject(err);
-        return;
-      } else if (!auth.projectId) {
-        reject(new Error('Could not determine project ID'));
-        return;
-      }
-
-      requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${
-        auth.projectId
-      }/configs/${configName}/variables`;
-      resolve(authToken);
+  const auth = new GoogleAuth(opts);
+  return auth
+    .getAccessToken()
+    .then(authToken => {
+      return auth.getProjectId().then(projectId => {
+        return {
+          authToken,
+          requestUrl: `https://runtimeconfig.googleapis.com/v1beta1/projects/${projectId}/configs/${configName}/variables`,
+        };
+      });
+    })
+    .then(res => {
+      return fetchPage(res.requestUrl, res.authToken);
     });
-  }).then(authToken => fetchPage(requestUrl, authToken));
 };
 
 /**
