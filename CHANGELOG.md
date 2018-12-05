@@ -4,6 +4,15 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## v0.3.2
+
+12-04-2018 16:20 PST
+
+### Internal / Testing Changes
+- fix(build): replace project system test key ([#23](https://github.com/googleapis/nodejs-rcloadenv/pull/23))
+- test: use execa for tests ([#22](https://github.com/googleapis/nodejs-rcloadenv/pull/22))
+- chore: update license file ([#21](https://github.com/googleapis/nodejs-rcloadenv/pull/21))
+
 ## v0.3.1
 
 12-02-2018 22:02 PST

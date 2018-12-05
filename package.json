@@ -1,7 +1,7 @@
 {
   "name": "@google-cloud/rcloadenv",
   "description": "Node.js implementation of rcloadenv. Wraps execution of a given command and loads variables from the Google Cloud Runtime Config API into that process.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "Apache-2.0",
   "author": "Google Inc.",
   "repository": "googleapis/nodejs-rcloadenv",
