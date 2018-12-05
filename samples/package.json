@@ -14,7 +14,7 @@
     "test": "mocha system-test --timeout 60000"
   },
   "dependencies": {
-    "@google-cloud/rcloadenv": "^0.3.1",
+    "@google-cloud/rcloadenv": "^0.3.2",
     "execa": "^1.0.0"
   },
   "devDependencies": {
