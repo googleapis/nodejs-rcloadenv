@@ -11,13 +11,14 @@
   "repository": "googleapis/nodejs-rcloadenv",
   "private": true,
   "scripts": {
-    "test": "mocha system-test --timeout 60000"
+    "test": "mocha --timeout 60000"
   },
   "dependencies": {
-    "@google-cloud/rcloadenv": "^0.3.2",
-    "execa": "^1.0.0"
+    "@google-cloud/rcloadenv": "^0.3.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "execa": "^1.0.0",
     "mocha": "^5.2.0"
   }
 }

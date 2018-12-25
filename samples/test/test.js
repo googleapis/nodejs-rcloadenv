@@ -13,13 +13,12 @@
  * limitations under the License.
  */
 
-const assert = require('assert');
+const {assert} = require('chai');
 const execa = require('execa');
 
 describe('quickstart samples', () => {
   it('should run the quickstart', async () => {
     const {stdout} = await execa('node', ['quickstart.js']);
-    assert.ok(stdout.length > 0);
-    assert.ok(stdout.includes('banana'));
+    assert.match(stdout, /banana/);
   });
 });

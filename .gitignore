@@ -3,4 +3,4 @@ package-lock.json
 .nyc_output
 .vscode
 build/
-
+.coverage
