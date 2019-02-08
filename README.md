@@ -114,7 +114,7 @@ rcloadenv.getAndApply('my-config', newEnv)
 ```
 
 ## Contributing
-See the [CONTRIBUTING.md](https://github.com/googleapis/nodejs-rcloadenv/tree/master/.github/CONTRIBUTING.md) file.
+See the [CONTRIBUTING.md](https://github.com/googleapis/nodejs-rcloadenv/tree/master/CONTRIBUTING.md) file.
 
 ## License
 Apache-2.0, see the [LICENSE](https://github.com/googleapis/nodejs-rcloadenv/tree/master/LICENSE) file.
