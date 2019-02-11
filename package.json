@@ -26,7 +26,9 @@
     "docs": "compodoc src/",
     "compile": "tsc -p .",
     "prepare": "npm run compile",
-    "pretest": "npm run compile"
+    "pretest": "npm run compile",
+    "docs-test": "blcl docs -r --exclude www.googleapis.com",
+    "predocs-test": "npm run docs"
   },
   "dependencies": {
     "google-auth-library": "^3.0.0",
@@ -54,6 +56,7 @@
     "prettier": "^1.15.2",
     "proxyquire": "^2.1.0",
     "source-map-support": "^0.5.9",
-    "typescript": "~3.3.0"
+    "typescript": "~3.3.0",
+    "broken-link-checker-local": "^0.2.0"
   }
 }
