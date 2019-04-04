@@ -18,7 +18,7 @@ const {execSync} = require('child_process');
 
 describe('quickstart samples', () => {
   it('should run the quickstart', async () => {
-    const {stdout} = await execa('node', ['quickstart.js']);
+    const stdout = execSync('node quickstart.js');
     assert.match(stdout, /banana/);
   });
 });
