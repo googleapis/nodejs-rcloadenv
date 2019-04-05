@@ -14,11 +14,13 @@
  */
 
 const {assert} = require('chai');
-const execa = require('execa');
+const cp = require('child_process');
+
+const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 describe('quickstart samples', () => {
   it('should run the quickstart', async () => {
-    const {stdout} = await execa('node', ['quickstart.js']);
+    const stdout = execSync('node quickstart.js');
     assert.match(stdout, /banana/);
   });
 });
