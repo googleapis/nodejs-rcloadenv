@@ -23,22 +23,22 @@ nock.disableNetConnect();
 const fakeConfig = 'fake-config';
 const fakeProjectId = 'fake-project';
 const fakeResponse = {
-  variables: [{name: 'fake', updateTime: 'fake', value: 'fake'}]
+  variables: [{name: 'fake', updateTime: 'fake', value: 'fake'}],
 };
 
 describe('rcloadenv api', () => {
   const rc = proxyquire('../src', {
-               'google-auth-library': {
-                 GoogleAuth: class {
-                   constructor() {
-                     return {
-                       getProjectId: () => Promise.resolve(fakeProjectId),
-                       request: () => Promise.resolve({data: fakeResponse})
-                     };
-                   }
-                 }
-               }
-             }) as typeof rcloadenv;
+    'google-auth-library': {
+      GoogleAuth: class {
+        constructor() {
+          return {
+            getProjectId: () => Promise.resolve(fakeProjectId),
+            request: () => Promise.resolve({data: fakeResponse}),
+          };
+        }
+      },
+    },
+  }) as typeof rcloadenv;
 
   it('should transform variables', () => {
     assert.ok(rc.transform);

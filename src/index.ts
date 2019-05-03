@@ -37,12 +37,15 @@ export interface RCLoadEnvOptions extends GoogleAuthOptions {
   debug?: boolean;
 }
 
-async function fetchPage(url: string, auth: GoogleAuth, nextPageToken?: string):
-    Promise<Variable[]> {
+async function fetchPage(
+  url: string,
+  auth: GoogleAuth,
+  nextPageToken?: string
+): Promise<Variable[]> {
   const params = {
     pageSize: PAGE_SIZE,
     returnValues: true,
-    pageToken: nextPageToken
+    pageToken: nextPageToken,
   };
 
   const response = await auth.request({url, params});
@@ -68,15 +71,19 @@ async function debug(opts: RCLoadEnvOptions, ...args: Array<{}>) {
  * @returns {Promise}
  */
 export async function getVariables(
-    configName: string, opts: RCLoadEnvOptions = {}) {
-  opts.scopes =
-      opts.scopes || ['https://www.googleapis.com/auth/cloudruntimeconfig'];
+  configName: string,
+  opts: RCLoadEnvOptions = {}
+) {
+  opts.scopes = opts.scopes || [
+    'https://www.googleapis.com/auth/cloudruntimeconfig',
+  ];
   debug(
-      opts, `Loading config "${configName}" from project "${opts.projectId}".`);
+    opts,
+    `Loading config "${configName}" from project "${opts.projectId}".`
+  );
   const auth = new GoogleAuth(opts);
   const projectId = await auth.getProjectId();
-  const requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${
-      projectId}/configs/${configName}/variables`;
+  const requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${projectId}/configs/${configName}/variables`;
   const result = await fetchPage(requestUrl, auth);
   return result;
 }
@@ -92,8 +99,10 @@ export async function getVariables(
  * @param {object} [opts]
  */
 export function transform(
-    variables: Variable[], oldEnv: NodeJS.ProcessEnv = {},
-    opts: TransformOptions = {}) {
+  variables: Variable[],
+  oldEnv: NodeJS.ProcessEnv = {},
+  opts: TransformOptions = {}
+) {
   const env = {} as NodeJS.ProcessEnv;
 
   opts.only = opts.only || [];
@@ -152,8 +161,10 @@ export function apply(variables: Variable[], env = process.env, opts = {}) {
  * @returns {Promise}
  */
 export async function getAndApply(
-    configName: string, env: NodeJS.ProcessEnv = process.env,
-    opts: RCLoadEnvOptions = {}) {
+  configName: string,
+  env: NodeJS.ProcessEnv = process.env,
+  opts: RCLoadEnvOptions = {}
+) {
   const vars = await getVariables(configName, opts);
   return apply(vars, env, opts);
 }
