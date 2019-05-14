@@ -4,6 +4,29 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## [1.0.0](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v0.3.3...v1.0.0) (2019-05-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency google-auth-library to v4 ([#79](https://www.github.com/googleapis/nodejs-rcloadenv/issues/79)) ([1386b78](https://www.github.com/googleapis/nodejs-rcloadenv/commit/1386b78))
+
+
+### Build System
+
+* upgrade engines field to >=8.10.0 ([#71](https://www.github.com/googleapis/nodejs-rcloadenv/issues/71)) ([542f935](https://www.github.com/googleapis/nodejs-rcloadenv/commit/542f935))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency gts to v1 ([#68](https://www.github.com/googleapis/nodejs-rcloadenv/issues/68)) ([972b473](https://www.github.com/googleapis/nodejs-rcloadenv/commit/972b473))
+
+
+### BREAKING CHANGES
+
+* **deps:** this will ship async/await with the generated code.
+* upgrade engines field to >=8.10.0 (#71)
+
 ## v0.3.3
 
 03-12-2019 12:20 PDT
@@ -79,4 +102,3 @@ Greetings y'all!  This is a patch service release that bumps a few dependencies.
 
 ### Internal / Testing Changes
 - test: add a few unit tests ([#6](https://github.com/googleapis/nodejs-rcloadenv/pull/6))
-
