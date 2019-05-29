@@ -35,6 +35,11 @@ export interface TransformOptions {
 
 export interface RCLoadEnvOptions extends GoogleAuthOptions {
   debug?: boolean;
+  /**
+   * The API endpoint of the service used to make requests.
+   * Defaults to `www.googleapis.com`.
+   */
+  apiEndpoint?: string;
 }
 
 async function fetchPage(
@@ -74,6 +79,7 @@ export async function getVariables(
   configName: string,
   opts: RCLoadEnvOptions = {}
 ) {
+  opts.apiEndpoint = opts.apiEndpoint || 'runtimeconfig.googleapis.com';
   opts.scopes = opts.scopes || [
     'https://www.googleapis.com/auth/cloudruntimeconfig',
   ];
@@ -83,7 +89,9 @@ export async function getVariables(
   );
   const auth = new GoogleAuth(opts);
   const projectId = await auth.getProjectId();
-  const requestUrl = `https://runtimeconfig.googleapis.com/v1beta1/projects/${projectId}/configs/${configName}/variables`;
+  const requestUrl = `https://${
+    opts.apiEndpoint
+  }/v1beta1/projects/${projectId}/configs/${configName}/variables`;
   const result = await fetchPage(requestUrl, auth);
   return result;
 }
