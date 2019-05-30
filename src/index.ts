@@ -37,7 +37,7 @@ export interface RCLoadEnvOptions extends GoogleAuthOptions {
   debug?: boolean;
   /**
    * The API endpoint of the service used to make requests.
-   * Defaults to `www.googleapis.com`.
+   * Defaults to `runtimeconfig.googleapis.com`.
    */
   apiEndpoint?: string;
 }
