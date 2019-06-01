@@ -14,6 +14,7 @@
  */
 
 import * as assert from 'assert';
+import {Gaxios, GaxiosOptions} from 'gaxios';
 import * as nock from 'nock';
 import * as proxyquire from 'proxyquire';
 
@@ -25,6 +26,7 @@ const fakeProjectId = 'fake-project';
 const fakeResponse = {
   variables: [{name: 'fake', updateTime: 'fake', value: 'fake'}],
 };
+let calledWith: GaxiosOptions;
 
 describe('rcloadenv api', () => {
   const rc = proxyquire('../src', {
@@ -33,7 +35,10 @@ describe('rcloadenv api', () => {
         constructor() {
           return {
             getProjectId: () => Promise.resolve(fakeProjectId),
-            request: () => Promise.resolve({data: fakeResponse}),
+            request: (options: GaxiosOptions) => {
+              calledWith = options;
+              return Promise.resolve({data: fakeResponse});
+            },
           };
         }
       },
@@ -53,7 +58,14 @@ describe('rcloadenv api', () => {
     assert.ok(rc.apply);
   });
 
-  it('should get and apply variables', async () => {
+  it('should get and apply variables', () => {
     assert.ok(rc.getAndApply);
+  });
+
+  it('should allow overriding the API endpoint', async () => {
+    const apiEndpoint = 'fake.endpoint';
+    const expectedUrl = `https://${apiEndpoint}/v1beta1/projects/fake-project/configs/fake-config/variables`;
+    await rc.getVariables(fakeConfig, {apiEndpoint});
+    assert.strictEqual(expectedUrl, calledWith.url);
   });
 });
