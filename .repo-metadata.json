@@ -1,0 +1,10 @@
+{
+  "name": "rcloadenv",
+  "name_pretty": "Google Cloud Runtime Config",
+  "product_documentation": "https://cloud.google.com/deployment-manager/runtime-configurator/",
+  "release_level": "ga",
+  "language": "nodejs",
+  "repo": "googleapis/nodejs-rcloadenv",
+  "distribution_name": "@google-cloud/rcloadenv",
+  "api_id": "runtimeconfig.googleapis.com"
+}
