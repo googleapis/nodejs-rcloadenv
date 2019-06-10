@@ -89,9 +89,7 @@ export async function getVariables(
   );
   const auth = new GoogleAuth(opts);
   const projectId = await auth.getProjectId();
-  const requestUrl = `https://${
-    opts.apiEndpoint
-  }/v1beta1/projects/${projectId}/configs/${configName}/variables`;
+  const requestUrl = `https://${opts.apiEndpoint}/v1beta1/projects/${projectId}/configs/${configName}/variables`;
   const result = await fetchPage(requestUrl, auth);
   return result;
 }
