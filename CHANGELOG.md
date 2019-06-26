@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [1.1.1](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.0...v1.1.1) (2019-06-26)
+
+
+### Bug Fixes
+
+* **docs:** make anchors work in jsdoc ([#93](https://www.github.com/googleapis/nodejs-rcloadenv/issues/93)) ([ee0be6d](https://www.github.com/googleapis/nodejs-rcloadenv/commit/ee0be6d))
+
 ## [1.1.0](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.0.0...v1.1.0) (2019-06-05)
 
 
