@@ -27,7 +27,7 @@
     "compile": "tsc -p .",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "docs-test": "linkinator docs -r --skip www.googleapis.com",
+    "docs-test": "linkinator docs",
     "predocs-test": "npm run docs"
   },
   "dependencies": {
@@ -49,7 +49,7 @@
     "eslint-plugin-node": "^9.0.0",
     "eslint-plugin-prettier": "^3.0.0",
     "gts": "^1.0.0",
-    "linkinator": "^1.1.2",
+    "linkinator": "^1.5.0",
     "mocha": "^6.0.0",
     "nock": "^10.0.2",
     "nyc": "^14.0.0",
