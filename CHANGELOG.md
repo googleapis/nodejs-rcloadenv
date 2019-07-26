@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [1.1.2](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.1...v1.1.2) (2019-07-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency google-auth-library to v5 ([#97](https://www.github.com/googleapis/nodejs-rcloadenv/issues/97)) ([fbf458d](https://www.github.com/googleapis/nodejs-rcloadenv/commit/fbf458d))
+
 ### [1.1.1](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.0...v1.1.1) (2019-06-26)
 
 
