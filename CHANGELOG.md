@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [1.1.3](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.2...v1.1.3) (2019-08-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency yargs to v14 ([229960d](https://www.github.com/googleapis/nodejs-rcloadenv/commit/229960d))
+
 ### [1.1.2](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.1...v1.1.2) (2019-07-26)
 
 
