@@ -57,6 +57,6 @@
     "prettier": "^1.15.2",
     "proxyquire": "^2.1.0",
     "source-map-support": "^0.5.9",
-    "typescript": "~3.5.0"
+    "typescript": "~3.6.0"
   }
 }
