@@ -1,5 +1,5 @@
 /**
- * Copyright 2016, Google, Inc.
+ * Copyright 2016 Google LLC
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,32 +13,28 @@
  * limitations under the License.
  */
 
-if (
-  !process.env.GCLOUD_PROJECT ||
-  !process.env.GOOGLE_APPLICATION_CREDENTIALS
-) {
-  throw new Error(
-    'The `GCLOUD_PROJECT` and `GOOGLE_APPLICATION_CREDENTIALS` environment variables must be set!'
-  );
-}
-
 async function main() {
+  //[START rcloadenv_quickstart]
   // import the npm module
   const rcloadenv = require('@google-cloud/rcloadenv');
 
-  // Just load raw variables from the Runtime Config service:
-  const vars = await rcloadenv.getVariables('my-config');
-  console.log(`${vars.length} variables found!`);
-  vars.forEach(console.log);
+  async function quickstart() {
+    // Just load raw variables from the Runtime Config service:
+    const vars = await rcloadenv.getVariables('my-config');
+    console.log(`${vars.length} variables found!`);
+    vars.forEach(console.log);
 
-  // Load the variables and apply them to the current environment
-  await rcloadenv.getAndApply('my-config');
-  console.log(process.env.fruit);
+    // Load the variables and apply them to the current environment
+    await rcloadenv.getAndApply('my-config');
+    console.log(process.env.fruit);
 
-  // Load the variables and mix them into a provided object
-  const newEnv = Object.assign({}, process.env);
-  const env = await rcloadenv.getAndApply('my-config', newEnv);
-  console.log(env.veggie);
+    // Load the variables and mix them into a provided object
+    const newEnv = Object.assign({}, process.env);
+    const env = await rcloadenv.getAndApply('my-config', newEnv);
+    console.log(env.veggie);
+  }
+  quickstart();
+  // [END rcloadenv_quickstart]
 }
 
 main().catch(console.error);
