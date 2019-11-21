@@ -4,6 +4,15 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [1.1.4](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.3...v1.1.4) (2019-11-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency yargs to v15 ([#123](https://www.github.com/googleapis/nodejs-rcloadenv/issues/123)) ([2ec222b](https://www.github.com/googleapis/nodejs-rcloadenv/commit/2ec222b07ea7a6013c141f92c84d5ede1ca10a64))
+* **docs:** add jsdoc-region-tag plugin ([#120](https://www.github.com/googleapis/nodejs-rcloadenv/issues/120)) ([57d613a](https://www.github.com/googleapis/nodejs-rcloadenv/commit/57d613af7ae5aa68ae0889283c4c8f646ce86496))
+* **docs:** release level should be beta ([00b4a52](https://www.github.com/googleapis/nodejs-rcloadenv/commit/00b4a5265b6a673fba8d7b9df80f5594b2acef9a))
+
 ### [1.1.3](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.2...v1.1.3) (2019-08-25)
 
 
