@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [1.1.5](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.4...v1.1.5) (2019-12-31)
+
+
+### Bug Fixes
+
+* **deps:** pin TypeScript below 3.7.0 ([163a603](https://www.github.com/googleapis/nodejs-rcloadenv/commit/163a6035c151181068936515e0c8946f260497e9))
+
 ### [1.1.4](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.3...v1.1.4) (2019-11-21)
 
 
