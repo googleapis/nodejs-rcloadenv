@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [1.1.6](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.5...v1.1.6) (2020-04-12)
+
+
+### Bug Fixes
+
+* apache license URL ([#468](https://www.github.com/googleapis/nodejs-rcloadenv/issues/468)) ([#165](https://www.github.com/googleapis/nodejs-rcloadenv/issues/165)) ([598dae3](https://www.github.com/googleapis/nodejs-rcloadenv/commit/598dae39aaccb46695985bcbf92c778fcd8d0ffa))
+
 ### [1.1.5](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.4...v1.1.5) (2019-12-31)
 
 
