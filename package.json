@@ -32,7 +32,7 @@
     "prelint": "cd samples; npm link ../; npm i"
   },
   "dependencies": {
-    "google-auth-library": "^5.0.0",
+    "google-auth-library": "^6.0.0",
     "lodash.snakecase": "^4.1.1",
     "yargs": "^15.0.0"
   },
