@@ -14,7 +14,6 @@
 
 import * as assert from 'assert';
 import {describe, it} from 'mocha';
-import {GaxiosOptions} from 'gaxios';
 import * as nock from 'nock';
 import * as proxyquire from 'proxyquire';
 
@@ -26,7 +25,7 @@ const fakeProjectId = 'fake-project';
 const fakeResponse = {
   variables: [{name: 'fake', updateTime: 'fake', value: 'fake'}],
 };
-let calledWith: GaxiosOptions;
+let calledWith: {};
 
 describe('rcloadenv api', () => {
   const rc = proxyquire('../src', {
@@ -35,7 +34,7 @@ describe('rcloadenv api', () => {
         constructor() {
           return {
             getProjectId: () => Promise.resolve(fakeProjectId),
-            request: (options: GaxiosOptions) => {
+            request: (options: {}) => {
               calledWith = options;
               return Promise.resolve({data: fakeResponse});
             },
@@ -66,6 +65,6 @@ describe('rcloadenv api', () => {
     const apiEndpoint = 'fake.endpoint';
     const expectedUrl = `https://${apiEndpoint}/v1beta1/projects/fake-project/configs/fake-config/variables`;
     await rc.getVariables(fakeConfig, {apiEndpoint});
-    assert.strictEqual(expectedUrl, calledWith.url);
+    assert.strictEqual(expectedUrl, (calledWith as {url: string}).url);
   });
 });

@@ -56,29 +56,29 @@ const cli = (exports.cli = yargs
     },
   })
   .example(
-    `rcloadenv my-config -- bash -c 'echo $MY_VARIABLE_NAME'`,
-    `Print a variable's value from the specified config.`
+    "rcloadenv my-config -- bash -c 'echo $MY_VARIABLE_NAME'",
+    "Print a variable's value from the specified config."
   )
   .example(
-    `rcloadenv my-config --only var1 var2 -- node app.js`,
-    `Only load two variables from runtime-config.`
+    'rcloadenv my-config --only var1 var2 -- node app.js',
+    'Only load two variables from runtime-config.'
   )
   .example(
-    `rcloadenv my-config --except var1 var2 -- node app.js`,
-    `Load all but two variables from runtime-config.`
+    'rcloadenv my-config --except var1 var2 -- node app.js',
+    'Load all but two variables from runtime-config.'
   )
   .example(
-    `rcloadenv my-config --debug -- node app.js`,
-    `Print debugging information while loading variables.`
+    'rcloadenv my-config --debug -- node app.js',
+    'Print debugging information while loading variables.'
   )
   .example(
-    `rcloadenv my-config --projectId my-project-id -- node app.js`,
-    `Specify the project ID to use when loading variables.`
+    'rcloadenv my-config --projectId my-project-id -- node app.js',
+    'Specify the project ID to use when loading variables.'
   )
   .wrap(120)
   .recommendCommands()
   .epilogue(
-    `For more information, see https://github.com/googleapis/nodejs-rcloadenv`
+    'For more information, see https://github.com/googleapis/nodejs-rcloadenv'
   )
   .help()
   .strict());
@@ -90,6 +90,7 @@ async function main(argv: string[]) {
 
   if (!configName || !args.length) {
     console.error(USAGE);
+    // eslint-disable-next-line no-process-exit
     process.exit(1);
   }
 
