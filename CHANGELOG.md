@@ -4,6 +4,23 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## [2.0.0](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.5...v2.0.0) (2020-05-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for node.js 8.x (#169)
+
+### Bug Fixes
+
+* apache license URL ([#468](https://www.github.com/googleapis/nodejs-rcloadenv/issues/468)) ([#165](https://www.github.com/googleapis/nodejs-rcloadenv/issues/165)) ([598dae3](https://www.github.com/googleapis/nodejs-rcloadenv/commit/598dae39aaccb46695985bcbf92c778fcd8d0ffa))
+* **deps:** update dependency google-auth-library to v6 ([#161](https://www.github.com/googleapis/nodejs-rcloadenv/issues/161)) ([0614526](https://www.github.com/googleapis/nodejs-rcloadenv/commit/0614526624cbbe886d39524e4e044747cd6e2518))
+
+
+### Build System
+
+* drop support for node.js 8.x ([#169](https://www.github.com/googleapis/nodejs-rcloadenv/issues/169)) ([8ed6505](https://www.github.com/googleapis/nodejs-rcloadenv/commit/8ed6505de8369e520c909c5a050f234f384a9e9b))
+
 ### [1.1.5](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v1.1.4...v1.1.5) (2019-12-31)
 
 
