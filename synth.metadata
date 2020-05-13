@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/nodejs-rcloadenv.git",
-        "sha": "80aab06c8baacfbcdcf4abfabbf71baf0e544ef5"
+        "sha": "f16e8ba6a5e353b6a3b4e390fa6bb01a16d32395"
       }
     }
   ]
