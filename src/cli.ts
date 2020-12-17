@@ -85,8 +85,8 @@ const cli = (exports.cli = yargs
 
 async function main(argv: string[]) {
   const opts = cli.parse(argv);
-  const configName = opts._[0];
-  const args = opts._.slice(1);
+  const configName = opts._[0] as string;
+  const args = opts._.slice(1) as string[];
 
   if (!configName || !args.length) {
     console.error(USAGE);
