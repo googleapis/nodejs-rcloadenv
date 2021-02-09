@@ -4,6 +4,14 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [2.0.3](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.2...v2.0.3) (2021-02-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency google-auth-library to v7 ([#227](https://www.github.com/googleapis/nodejs-rcloadenv/issues/227)) ([6fb278e](https://www.github.com/googleapis/nodejs-rcloadenv/commit/6fb278e8278f1e70f7dded16e43926a9fdddf100))
+* **types:** add types to CLI args ([#220](https://www.github.com/googleapis/nodejs-rcloadenv/issues/220)) ([c52662e](https://www.github.com/googleapis/nodejs-rcloadenv/commit/c52662e618f9cde9b1f47b5d48a82022e8f59d1a))
+
 ### [2.0.2](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.1...v2.0.2) (2020-09-12)
 
 
