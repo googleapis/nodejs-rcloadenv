@@ -115,7 +115,7 @@ export function transform(
 
   variables.forEach(variable => {
     let value;
-    const name = path.parse(variable.name).base.replace('-', '_');
+    const name = path.parse(variable.name).base.replace(/-/g, '_');
     debug(opts, `Found: ${name}`);
 
     if (opts.only!.length && opts.only!.indexOf(name) === -1) {

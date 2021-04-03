@@ -45,7 +45,26 @@ describe('rcloadenv api', () => {
   }) as typeof rcloadenv;
 
   it('should transform variables', () => {
-    assert.ok(rc.transform);
+    assert.deepStrictEqual(
+      rc.transform([
+        {
+          name: 'projects/my-project/configs/my-config/variables/foo-bar',
+          value: Buffer.from('foobar').toString('base64'),
+          updateTime: '2021-04-02T18:54:21.123157030Z',
+        },
+        {
+          name: 'projects/my-project/configs/my-config/variables/foo-bar-baz',
+          value: Buffer.from('foobarbaz').toString('base64'),
+          updateTime: '2021-04-02T18:54:19.748781825Z',
+        },
+      ]),
+      {
+        foo_bar: 'foobar',
+        FOO_BAR: 'foobar',
+        foo_bar_baz: 'foobarbaz',
+        FOO_BAR_BAZ: 'foobarbaz',
+      }
+    );
   });
 
   it('should load variables', async () => {
