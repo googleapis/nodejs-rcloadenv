@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [2.0.4](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.3...v2.0.4) (2021-04-06)
+
+
+### Bug Fixes
+
+* replace all dashes in transform ([#229](https://www.github.com/googleapis/nodejs-rcloadenv/issues/229)) ([e60412d](https://www.github.com/googleapis/nodejs-rcloadenv/commit/e60412d0dc4c121ff2fa13815826b13d4c2ec987))
+
 ### [2.0.3](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.2...v2.0.3) (2021-02-09)
 
 
