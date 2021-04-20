@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-rcloadenv.git",
-        "sha": "719fef4c79f0b89e7e99e1584d7759b000701454"
+        "sha": "fbd5351b8d0308e1c8acdcde89ea6c44c6275ac9"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "57c23fa5705499a4181095ced81f0ee0933b64f6"
+        "sha": "c6706ee5d693e9ae5967614170732646590d8374"
       }
     }
   ]
