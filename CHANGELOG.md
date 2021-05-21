@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## [2.1.0](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.4...v2.1.0) (2021-05-21)
+
+
+### Features
+
+* add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#237](https://www.github.com/googleapis/nodejs-rcloadenv/issues/237)) ([07efa36](https://www.github.com/googleapis/nodejs-rcloadenv/commit/07efa360471942052a34d7ec4ba05a69df4d1157))
+
 ### [2.0.4](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.3...v2.0.4) (2021-04-06)
 
 
