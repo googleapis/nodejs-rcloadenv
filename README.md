@@ -6,7 +6,7 @@
 
 [![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
 [![npm version](https://img.shields.io/npm/v/@google-cloud/rcloadenv.svg)](https://www.npmjs.org/package/@google-cloud/rcloadenv)
-[![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-rcloadenv/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-rcloadenv)
+[![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-rcloadenv/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-rcloadenv)
 
 
 
@@ -15,7 +15,7 @@ Node.js implementation of rcloadenv. Wraps execution of a given command and load
 
 
 A comprehensive list of changes in each version may be found in
-[the CHANGELOG](https://github.com/googleapis/nodejs-rcloadenv/blob/master/CHANGELOG.md).
+[the CHANGELOG](https://github.com/googleapis/nodejs-rcloadenv/blob/main/CHANGELOG.md).
 
 
 * [Google Cloud Runtime Config Documentation][product-docs]
@@ -83,11 +83,11 @@ quickstart();
 
 ## Samples
 
-Samples are in the [`samples/`](https://github.com/googleapis/nodejs-rcloadenv/tree/master/samples) directory. Each sample's `README.md` has instructions for running its sample.
+Samples are in the [`samples/`](https://github.com/googleapis/nodejs-rcloadenv/tree/main/samples) directory. Each sample's `README.md` has instructions for running its sample.
 
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
-| Quickstart | [source code](https://github.com/googleapis/nodejs-rcloadenv/blob/master/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-rcloadenv&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
+| Quickstart | [source code](https://github.com/googleapis/nodejs-rcloadenv/blob/main/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-rcloadenv&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 
 
@@ -132,7 +132,7 @@ More Information: [Google Cloud Platform Launch Stages][launch_stages]
 
 ## Contributing
 
-Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-rcloadenv/blob/master/CONTRIBUTING.md).
+Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-rcloadenv/blob/main/CONTRIBUTING.md).
 
 Please note that this `README.md`, the `samples/README.md`,
 and a variety of configuration files in this repository (including `.nycrc` and `tsconfig.json`)
@@ -144,7 +144,7 @@ to its templates in
 
 Apache Version 2.0
 
-See [LICENSE](https://github.com/googleapis/nodejs-rcloadenv/blob/master/LICENSE)
+See [LICENSE](https://github.com/googleapis/nodejs-rcloadenv/blob/main/LICENSE)
 
 
 [product-docs]: https://cloud.google.com/deployment-manager/runtime-configurator/
