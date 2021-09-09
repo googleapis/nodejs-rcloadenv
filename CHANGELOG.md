@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+### [2.1.1](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.1.0...v2.1.1) (2021-09-09)
+
+
+### Bug Fixes
+
+* **build:** switch primary branch to main ([#259](https://www.github.com/googleapis/nodejs-rcloadenv/issues/259)) ([68e4c12](https://www.github.com/googleapis/nodejs-rcloadenv/commit/68e4c12a9bce270070b96f244ec027f0fede4994))
+
 ## [2.1.0](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.0.4...v2.1.0) (2021-06-10)
 
 
