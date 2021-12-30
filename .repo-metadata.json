@@ -7,6 +7,6 @@
   "repo": "googleapis/nodejs-rcloadenv",
   "distribution_name": "@google-cloud/rcloadenv",
   "api_id": "runtimeconfig.googleapis.com",
-  "client_documentation": "",
+  "client_documentation": "https://github.com/googleapis/nodejs-rcloadenv/blob/main/README.md",
   "library_type": "OTHER"
 }
