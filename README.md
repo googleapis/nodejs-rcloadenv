@@ -4,7 +4,7 @@
 
 # [Google Cloud Runtime Config: Node.js Client](https://github.com/googleapis/nodejs-rcloadenv)
 
-
+[![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
 [![npm version](https://img.shields.io/npm/v/@google-cloud/rcloadenv.svg)](https://www.npmjs.org/package/@google-cloud/rcloadenv)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-rcloadenv/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-rcloadenv)
 
