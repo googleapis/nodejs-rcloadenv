@@ -7,7 +7,6 @@
   "repo": "googleapis/nodejs-rcloadenv",
   "distribution_name": "@google-cloud/rcloadenv",
   "api_id": "runtimeconfig.googleapis.com",
-  "api_shortname": "rcloadenv",
   "client_documentation": "",
   "library_type": "OTHER"
 }
