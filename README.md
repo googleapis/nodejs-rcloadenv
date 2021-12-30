@@ -17,7 +17,7 @@ Node.js implementation of rcloadenv. Wraps execution of a given command and load
 A comprehensive list of changes in each version may be found in
 [the CHANGELOG](https://github.com/googleapis/nodejs-rcloadenv/blob/main/CHANGELOG.md).
 
-
+* [Google Cloud Runtime Config Node.js Client API Reference][client-docs]
 * [Google Cloud Runtime Config Documentation][product-docs]
 * [github.com/googleapis/nodejs-rcloadenv](https://github.com/googleapis/nodejs-rcloadenv)
 
@@ -91,6 +91,9 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-rcloadenv/t
 
 
 
+The [Google Cloud Runtime Config Node.js Client API Reference][client-docs] documentation
+also contains samples.
+
 ## Supported Node.js Versions
 
 Our client libraries follow the [Node.js release schedule](https://nodejs.org/en/about/releases/).
@@ -147,7 +150,7 @@ Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-rcloadenv/blob/main/LICENSE)
 
-
+[client-docs]: https://github.com/googleapis/nodejs-rcloadenv/blob/main/README.md
 [product-docs]: https://cloud.google.com/deployment-manager/runtime-configurator/
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
