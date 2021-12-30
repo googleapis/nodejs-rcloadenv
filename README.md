@@ -4,7 +4,7 @@
 
 # [Google Cloud Runtime Config: Node.js Client](https://github.com/googleapis/nodejs-rcloadenv)
 
-[![release level](https://img.shields.io/badge/release%20level-beta-yellow.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
+
 [![npm version](https://img.shields.io/npm/v/@google-cloud/rcloadenv.svg)](https://www.npmjs.org/package/@google-cloud/rcloadenv)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-rcloadenv/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-rcloadenv)
 
@@ -17,7 +17,7 @@ Node.js implementation of rcloadenv. Wraps execution of a given command and load
 A comprehensive list of changes in each version may be found in
 [the CHANGELOG](https://github.com/googleapis/nodejs-rcloadenv/blob/main/CHANGELOG.md).
 
-
+* [Google Cloud Runtime Config Node.js Client API Reference][client-docs]
 * [Google Cloud Runtime Config Documentation][product-docs]
 * [github.com/googleapis/nodejs-rcloadenv](https://github.com/googleapis/nodejs-rcloadenv)
 
@@ -30,7 +30,7 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 
 
 * [Quickstart](#quickstart)
-  * [Before you begin](#before-you-begin)
+
   * [Installing the client library](#installing-the-client-library)
   * [Using the client library](#using-the-client-library)
 * [Samples](#samples)
@@ -39,13 +39,6 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 * [License](#license)
 
 ## Quickstart
-
-### Before you begin
-
-1.  [Select or create a Cloud Platform project][projects].
-1.  [Enable the Google Cloud Runtime Config API][enable_api].
-1.  [Set up authentication with a service account][auth] so you can access the
-    API from your local workstation.
 
 ### Installing the client library
 
@@ -91,6 +84,9 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-rcloadenv/t
 
 
 
+The [Google Cloud Runtime Config Node.js Client API Reference][client-docs] documentation
+also contains samples.
+
 ## Supported Node.js Versions
 
 Our client libraries follow the [Node.js release schedule](https://nodejs.org/en/about/releases/).
@@ -119,13 +115,12 @@ This library follows [Semantic Versioning](http://semver.org/).
 
 
 
-This library is considered to be in **beta**. This means it is expected to be
-mostly stable while we work toward a general availability release; however,
-complete stability is not guaranteed. We will address issues and requests
-against beta libraries with a high priority.
 
 
 
+This library is considered to be in **preview**. This means it is still a
+work-in-progress and under active development. Any release is subject to
+backwards-incompatible changes at any time.
 
 
 More Information: [Google Cloud Platform Launch Stages][launch_stages]
@@ -148,10 +143,10 @@ Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-rcloadenv/blob/main/LICENSE)
 
-
+[client-docs]: https://github.com/googleapis/nodejs-rcloadenv/blob/main/README.md
 [product-docs]: https://cloud.google.com/deployment-manager/runtime-configurator/
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
 [billing]: https://support.google.com/cloud/answer/6293499#enable-billing
-[enable_api]: https://console.cloud.google.com/flows/enableapi?apiid=runtimeconfig.googleapis.com
+
 [auth]: https://cloud.google.com/docs/authentication/getting-started
