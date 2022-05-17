@@ -100,7 +100,7 @@ async function main(argv: string[]) {
     currentEnv,
     opts as rcloadenv.RCLoadEnvOptions
   );
-  await new Promise((resolve, reject) => {
+  await new Promise<void>((resolve, reject) => {
     childProcess
       .spawn(args.shift()!, args, {stdio: 'inherit', env})
       .on('error', reject)
