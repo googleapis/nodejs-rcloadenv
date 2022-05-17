@@ -4,6 +4,17 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## [3.0.0](https://github.com/googleapis/nodejs-rcloadenv/compare/v2.1.1...v3.0.0) (2022-05-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* update library to use Node 12 (#294)
+
+### Build System
+
+* update library to use Node 12 ([#294](https://github.com/googleapis/nodejs-rcloadenv/issues/294)) ([afc9ebd](https://github.com/googleapis/nodejs-rcloadenv/commit/afc9ebd7b5b484ea1773714390ea247a33e29b7a))
+
 ### [2.1.1](https://www.github.com/googleapis/nodejs-rcloadenv/compare/v2.1.0...v2.1.1) (2021-09-09)
 
 
