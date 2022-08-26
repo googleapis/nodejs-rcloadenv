@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## [3.0.1](https://github.com/googleapis/nodejs-rcloadenv/compare/v3.0.0...v3.0.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* remove pip install statements ([#1546](https://github.com/googleapis/nodejs-rcloadenv/issues/1546)) ([#298](https://github.com/googleapis/nodejs-rcloadenv/issues/298)) ([a3cddb0](https://github.com/googleapis/nodejs-rcloadenv/commit/a3cddb0e48946a84ed48a2a09a4026968a3c4949))
+
 ## [3.0.0](https://github.com/googleapis/nodejs-rcloadenv/compare/v2.1.1...v3.0.0) (2022-05-17)
 
 
