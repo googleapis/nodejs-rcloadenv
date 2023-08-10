@@ -4,6 +4,17 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/rcloadenv?activeTab=versions
 
+## [4.0.0](https://github.com/googleapis/nodejs-rcloadenv/compare/v3.0.1...v4.0.0) (2023-08-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to Node 14
+
+### Miscellaneous Chores
+
+* Upgrade to Node 14 ([695c14a](https://github.com/googleapis/nodejs-rcloadenv/commit/695c14ac2409b8429f9b0b11e449537fa9283c3d))
+
 ## [3.0.1](https://github.com/googleapis/nodejs-rcloadenv/compare/v3.0.0...v3.0.1) (2022-08-23)
 
 
