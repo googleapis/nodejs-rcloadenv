@@ -5,3 +5,5 @@ package-lock.json
 build/
 .coverage
 docs/
+.DS_Store
+__pycache__/
