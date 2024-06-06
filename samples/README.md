@@ -6,7 +6,7 @@
 
 [![Open in Cloud Shell][shell_img]][shell_link]
 
-
+**_THIS REPOSITORY AND PACKAGE WILL BE DEPRECATED IN JULY 2024_**
 
 ## Table of Contents
 

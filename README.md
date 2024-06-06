@@ -10,7 +10,7 @@
 
 
 
-Node.js implementation of rcloadenv. Wraps execution of a given command and loads variables from the Google Cloud Runtime Config API into that process.
+**_THIS REPOSITORY AND PACKAGE WILL BE DEPRECATED IN JULY 2024_**
 
 
 A comprehensive list of changes in each version may be found in
